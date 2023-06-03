@@ -7,18 +7,17 @@ export class TodoList extends React.Component {
         inputValue: ""
     }
 
-
-    handleOnClick = () => {
-        this.setState({
-            arr: [...this.props.fruits, this.state.inputValue ],
-            inputValue: "" })
-            
-    }
-
     handleInput = (event) => {
         this.setState({
             inputValue: event.target.value
         })
+    }
+
+    handleOnClick = () => {
+        this.setState({
+            arr: [...this.state.arr, this.state.inputValue ],
+            inputValue: "" })
+            
     }
 
     handleReset = () => {
