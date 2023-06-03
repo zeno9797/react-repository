@@ -39,7 +39,7 @@ export class TodoList extends React.Component {
                       return <li key={index}>{element}</li>
                     })}
                 </ul>
-                <input name="inputFruit" onChange={this.handleInput} type="text" />
+                <input onChange={this.handleInput} type="text" value={this.state.inputValue} />
                 <button onClick={this.handleOnClick}>Add fruits</button>
                 <button onClick={this.handleReset} >Reset input text</button>
             </div>
