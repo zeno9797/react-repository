@@ -10,7 +10,7 @@ export class TodoList extends React.Component {
 
     handleOnClick = () => {
         this.setState({
-            arr: [...this.props.fruits, this.state.inputValue ],
+            arr: [...this.state.arr, this.state.inputValue ],
             inputValue: "" })
             
     }
@@ -33,7 +33,7 @@ export class TodoList extends React.Component {
                       return <li key={index}>{element}</li>
                     })}
                 </ul>
-                <input name="inputFruit" onChange={this.handleInput} type="text" />
+                <input onChange={this.handleInput} type="text" />
                 <button onClick={this.handleOnClick}>Add fruits</button>
             </div>
             </>

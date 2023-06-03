@@ -15,7 +15,7 @@ export class TodoList extends React.Component {
 
     handleOnClick = () => {
         this.setState({
-            arr: [...this.props.fruits, this.state.inputValue ],
+            arr: [...this.state.arr, this.state.inputValue ],
             inputValue: "" })
     }
 
