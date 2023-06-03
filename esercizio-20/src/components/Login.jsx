@@ -9,9 +9,27 @@ export class Login extends React.Component {
 
 
     handleInputChange = (event) => {
+
+        const name = event.target.name
+        const value = event.target.value
+
         this.setState({
-            [event.target.name]: event.target.value
+            [name]: value
         });
+    }
+
+
+    handleLogin = (event) => {
+
+        event.preventDefault()
+        
+        const username = event.target.elements.username.value
+        const password = event.target.elements.password.value
+
+        console.log(
+            username,
+            password
+        )
     }
 
     handleLoginReset = () => {
@@ -22,20 +40,15 @@ export class Login extends React.Component {
         })
     }
 
-    handleLogin = () => {
-        console.log(this.state.username)
-        console.log(this.state.password)
-    }
-
 
     render() {
         return (
-                <div>
+                <form onSubmit={this.handleLogin}>
                     <input name="username" type="text" placeholder="username" onChange={this.handleInputChange} value={this.state.username} />
                     <input name="password" type="password" placeholder="password" onChange={this.handleInputChange} value={this.state.password} />
-                    <button onClick={this.handleLogin} disabled={!this.state.username || !this.state.password}>Login</button>
+                    <button disabled={!this.state.username || !this.state.password}>Login</button>
                     <button onClick={this.handleLoginReset}>Reset</button>
-                </div>
+                </form>
         )
     }
 }
