@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-bootstrap": "^2.7.4",
+    "tailwindcss": "^3.3.2"
+  }
+}
