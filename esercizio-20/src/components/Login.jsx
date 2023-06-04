@@ -26,10 +26,7 @@ export class Login extends React.Component {
         const username = event.target.elements.username.value
         const password = event.target.elements.password.value
 
-        console.log(
-            username,
-            password
-        )
+        this.props.onLogin(username,password)
     }
 
     handleLoginReset = () => {
