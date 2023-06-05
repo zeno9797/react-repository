@@ -12,9 +12,13 @@ export class Container extends React.Component {
             <div className="container">
                 <div>
                     {this.props.title}
+                    <p>ciao ciao</p>
                 </div>
+
                 <hr style={hrStyle}/>
+
                 <div>
+                <h1>Ciao ciao</h1>
                     {this.props.children}
                 </div>
 
