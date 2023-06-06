@@ -43,7 +43,7 @@ export class TodoList extends React.Component {
                 <ul>
                     {this.props.render(this.state.arr, this.deleteTodo)}
                 </ul>
-                <input onChange={this.handleInput} type="text" value={this.state.inputValue} />
+                <input onChange={this.handleInput} type="text" value={this.state.inputValue}  />
                 <button onClick={this.handleOnClick}>Add fruits</button>
                 <button onClick={this.handleReset} >Reset input text</button>
             </div>
@@ -52,3 +52,4 @@ export class TodoList extends React.Component {
     }
 }
 
+ 
