@@ -14,6 +14,7 @@ function Login() {
             [name]: type === "checkbox" ? checked : value
             }
         })
+        
     }
 
     function handleLogin(event){
@@ -25,9 +26,6 @@ function Login() {
 
         console.log(username, password, checkbox)
     }
-
-
-   
 
     return (
             <form onSubmit={handleLogin}>
