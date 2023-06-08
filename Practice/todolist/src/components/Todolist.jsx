@@ -1,32 +1,25 @@
 import { useState } from "react";
 
 function Todolist({ fruits }) {
-    const [arr, setArr] = useState({
-        arr: fruits,
-        inputValue: ""
-    })
+    const [arr, setArr] = useState(fruits)
+    const [inputValue, setInput] = useState("")
 
     function handleChange(event) {
         const input = event.target.value
-        setArr((arr) => {
-            return {
-                inputValue: input
-            }
-        })
+        setInput(input)
 
     }
 
     function handleClick() {
-        setArr((arr) => {
-             [...arr, arr.inputValue]
-        })
+        setArr([...arr, inputValue]
+        )
     }
 
 
     return (
         <div>
             <ul>
-                {fruits.map((element,index) => {
+                {arr.map((element,index) => {
                     return <li key={index}> {`${element}`}</li>
 
                 })}
