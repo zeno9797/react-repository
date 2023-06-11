@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <GithubUser username="ciao" />
+      <GithubUser username="zeno9797"/>
     </>
   )
 }
