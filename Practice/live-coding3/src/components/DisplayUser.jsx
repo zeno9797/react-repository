@@ -1,8 +1,8 @@
 import React from 'react'
 
-function DisplayUser(props) {
+function DisplayUser({el}) {
   return (
-    <p > {props.el.name} </p>
+    <p> {el.name} </p>
   )
 }
 

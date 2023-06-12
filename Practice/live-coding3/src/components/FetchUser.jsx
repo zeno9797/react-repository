@@ -4,9 +4,6 @@ import DisplayUser from './DisplayUser'
 function FetchUser() {
    const [arr, setArr] = useState([])
 
-    
-
-
     useEffect(() => {
         async function fetchData(){
             const response = await fetch("https://jsonplaceholder.typicode.com/users")
@@ -18,9 +15,6 @@ function FetchUser() {
 
         fetchData()
     }, [])
-
-
-        
 
 
   return (
