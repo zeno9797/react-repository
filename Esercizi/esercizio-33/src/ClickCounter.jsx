@@ -4,12 +4,14 @@ function ClickCounter({inputValue = 0}) {
     const [count, setCount] = useState(inputValue)
 
     useEffect(() => {
-        console.log(count)
+        const id = setInterval(() => {
+            setCount(0)
+        }, 2000)
+        
 
         return () => {
-            setTimeout(() => {
-                setCount(0)
-            }, 2000 )
+            clearInterval(id)
+            console.log(count)
         }
     }, [count])
 
