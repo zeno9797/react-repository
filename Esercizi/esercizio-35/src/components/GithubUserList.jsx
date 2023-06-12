@@ -26,10 +26,10 @@ function GithubUserList() {
     <div>
         <ul>
             {users.map((element,index) => {
-                return <li key={index}>{element}</li> 
+                return <GithubUser onAddUser={handleAddUser}/>
             })}
         </ul>
-        <GithubUser onAddUser={handleAddUser}/>
+        
     </div>
   )
 }
