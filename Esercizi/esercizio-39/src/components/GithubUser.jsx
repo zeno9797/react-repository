@@ -1,8 +1,15 @@
 import React from 'react'
 import { useGithubUser } from './useGithubUser'
+import { useEffect } from 'react'
+
 
 function GithubUser({username}) {
-    const {user, loading, error} = useGithubUser(username)
+    const {user, loading, error, fetchData} = useGithubUser(username)
+
+    useEffect(() => {
+      fetchData(username)
+  }, [username])
+
     
   return (
     <div>
