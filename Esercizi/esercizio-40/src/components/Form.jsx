@@ -9,15 +9,11 @@ function Form({initialData}) {
           color: initialData.color,
         })
 
+        const formRef = useRef();
+
         useEffect(() => {
-        
-           setForm({
-            model:"",
-            year: "",
-            color: "",
-           });
-          
-        }, [form.model || form.year || form.color]);
+          formRef.current.reset()
+        }, [])
 
         const modelRef = useRef()
         const yearRef = useRef()
@@ -43,7 +39,7 @@ function Form({initialData}) {
         return (
           <div>
             <h1>Form - esercizio 40</h1>
-            <form onSubmit={handleSubmit}>
+            <form ref={formRef} onSubmit={handleSubmit}>
               <label>Model</label>
               <input ref={modelRef} onChange={handleModel} value={form.model}/>
       
