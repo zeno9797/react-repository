@@ -13,7 +13,7 @@ function Form({initialData}) {
 
         useEffect(() => {
           formRef.current.reset()
-        }, [])
+        }, [form.model || form.year || form.color])
 
         const modelRef = useRef()
         const yearRef = useRef()
@@ -55,7 +55,7 @@ function Form({initialData}) {
       
               <br /><br />
       
-              <button type="submit">Submit</button>
+              <button>Submit</button>
             </form>
           </div>
         )
