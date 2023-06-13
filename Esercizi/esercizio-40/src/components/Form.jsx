@@ -17,7 +17,7 @@ function Form({initialData}) {
             color: "",
            });
           
-        }, [initialData]);
+        }, [form.model || form.year || form.color]);
 
         const modelRef = useRef()
         const yearRef = useRef()
