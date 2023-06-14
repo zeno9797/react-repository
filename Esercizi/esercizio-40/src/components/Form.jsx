@@ -10,10 +10,9 @@ function Form({initialData}) {
         })
 
         const formRef = useRef();
+        
 
-        useEffect(() => {
-          formRef.current.reset()
-        }, [form.model || form.year || form.color])
+        
 
         const modelRef = useRef()
         const yearRef = useRef()
@@ -35,6 +34,10 @@ function Form({initialData}) {
           event.preventDefault()
           console.log(form)
         }
+
+        useEffect(() => {
+          console.log("ciao")
+        }, [form.model, form.year, form.color])
       
         return (
           <div>
