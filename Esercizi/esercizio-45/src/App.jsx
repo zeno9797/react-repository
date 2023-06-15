@@ -11,7 +11,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<ShowGithubUser/>}/>
-        <Route path="/users:username" element={<GithubUser/>}/>
+        <Route path="/users:username" element={<ShowGithubUser/>}/>
+        <Route path="/:username" element={<GithubUser/>}/>
+        
       </Routes>
     </>
   )
