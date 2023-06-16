@@ -8,11 +8,13 @@ function Component({obj}) {
     const [arr, setArr] = useState([])
 
     useEffect(() => {
-      setArr(obj.filter((element) => {
-            return element.age > 18
-    }))}, [obj])
+      setArr(obj)}, [obj])
 
-    const memoizedArr = useMemo(() => arr, [arr])
+      const memoizedArr = useMemo(() => {
+        return arr.filter((element) => {
+          return element.age > 18
+        })
+      }, [arr])
 
   return (
     <div>
