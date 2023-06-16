@@ -13,6 +13,7 @@ function App() {
       <Routes>
        <Route path="/" element={<GithubUserList/>} />
        <Route path="/users" element={<ShowGithubUser/>}>
+        <Route index element={<h3>Please click the link to show user data</h3>}/>
         <Route path=":username" element={<GithubUser/>}/>
        </Route>
         
