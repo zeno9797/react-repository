@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 
 function Form({initialData}) {
-    
+        
         const [form, setForm] = useState({
           model: initialData.model,
           year: initialData.year,
@@ -11,8 +11,15 @@ function Form({initialData}) {
 
         const formRef = useRef();
         
-
-        
+        useEffect(() => {
+          
+            setForm({
+              model: "",
+              year: "",
+              color: ""
+            })
+          
+        }, [initialData])
 
         const modelRef = useRef()
         const yearRef = useRef()
@@ -35,9 +42,7 @@ function Form({initialData}) {
           console.log(form)
         }
 
-        useEffect(() => {
-          console.log("ciao")
-        }, [form.model, form.year, form.color])
+       
       
         return (
           <div>
